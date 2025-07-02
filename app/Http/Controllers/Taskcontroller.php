@@ -15,7 +15,7 @@ class Taskcontroller extends Controller
             'status' => 'required|string',
             'priority' => 'required|integer',
             'project_id' => 'nullable|integer',
-            'due_date' => 'nullable|date',
+            'deadline' => 'nullable|date',
         ]);
 
         $task = Task::create($validated);
@@ -31,7 +31,7 @@ class Taskcontroller extends Controller
             'status' => 'sometimes|required|string',
             'priority' => 'sometimes|required|integer',
             'project_id' => 'nullable|integer',
-            'due_date' => 'nullable|date',
+            'deadline' => 'nullable|date',
         ]);
 
         $task = Task::findOrFail($id);
